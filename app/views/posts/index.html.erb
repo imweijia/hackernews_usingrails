@@ -1,0 +1,19 @@
+<table class="table">
+  <tr class="bold">
+    <th>Title</th>
+    <th>Post by</th>
+    <th>Link</th>
+    <th>Number of comments</th>
+  </tr>
+
+  <% Post.all.each do |p| %>
+    <tr>
+      <td><%= link_to p.title, p %></td>
+      <td><%= p.user.username %></td>
+      <td><%= link_to p.external_url, p.external_url %></td>
+      <td><%= p.comments.count %></td>
+
+    </tr>
+  <% end %>
+</table>
+

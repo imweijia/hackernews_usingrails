@@ -1,0 +1,89 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+#container {
+  font-family: Verdana, Geneva, sans-serif;
+  margin: 20px;
+}
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: 30px;
+}
+
+#header {
+  margin-bottom: 20px;
+  background-color: #ff6600;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 0 2px 15px;
+  float: left;
+  width: 100%;
+}
+
+/*.Y {
+  margin-bottom: 20px;
+  background-color: #ff6600;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  padding: 4px 5px 2px 15px;
+  float: left;
+}*/
+
+.break {
+  clear: both;
+  margin-bottom: 10px;
+}
+
+.checkbox {
+  margin-top: -50px;
+  margin-bottom: 10px;
+}
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+.table {
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  /*padding: 10px;*/
+}
+
+.table td {
+  padding: 2px 5px 2px 5px;
+}
+
+.newpost {
+  margin-bottom: 50px;
+}
+
+.bold {
+  font-weight: bold;
+}

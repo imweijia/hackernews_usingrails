@@ -1,0 +1,34 @@
+<p>
+  <strong><%= @user.username %></strong> is logged in.
+</p>
+
+<div class="newpost">
+  <%= link_to 'Create Post', '../posts/new' %>
+</div>
+
+<p>
+  <div class="table">
+    <table>
+      <tr class ="bold">
+        <td>Title</td>
+        <td>Link</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+  <% Post.where(user: @user).each do |p| %>
+        <td><%= p.title %></td>
+        <td><%= p.external_url %></td>
+        <td><%= link_to 'Go to post', post_path(p) %></td>
+        <td><%= link_to 'Edit', edit_post_path(p) %></td>
+        <td><%= link_to 'Delete', post_path(p),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></td>
+
+      </tr>
+  <% end %>
+    </table>
+  </div>
+</p>
+

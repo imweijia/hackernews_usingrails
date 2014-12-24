@@ -1,0 +1,32 @@
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= link_to @post.external_url, @post.external_url %>
+</p>
+
+<p>
+  <%= render 'comments/form' %>
+</p>
+
+<p>
+<p>
+  <div class="table">
+    <table>
+      <tr class ="bold">
+        <td>Comments</td>
+        <td>Commenter</td>
+      </tr>
+      <tr>
+  <% Comment.where(post: @post).each do |c| %>
+        <td><%= c.content %></td>
+        <td><%= c.user.username %></td>
+      </tr>
+  <% end %>
+    </table>
+  </div>
+
+</p>
